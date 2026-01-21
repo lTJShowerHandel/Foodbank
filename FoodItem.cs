@@ -5,20 +5,20 @@ using System;
 public class FoodItem
 {
     // Properties to store food item information
-    public string Name { get; set; }
-    public string Category { get; set; }
-    public int Quantity { get; set; }
+    private string Name;
+    private string Category;
+    private int Quantity;
     
     //the method is built as public <datatype> <name> { get; set; } -- which means it will get and set params here
-    public DateTime ExpirationDate { get; set; }
+    DateTime ExpirationDate;
 
     // Constructor - this runs when you create a new FoodItem
     public FoodItem(string name, string category, int quantity, DateTime expirationDate)
     {
-        Name = name;
-        Category = category;
-        Quantity = quantity;
-        ExpirationDate = expirationDate;
+        this.Name = name;
+        this.Category = category;
+        this.Quantity = quantity;
+        this.ExpirationDate = expirationDate;
     }
 
     // Method to display food item information in a nice format
@@ -31,5 +31,11 @@ public class FoodItem
     public bool IsExpired()
     {
         return ExpirationDate < DateTime.Now;
+    }
+    
+    //make a get name method
+    public string GetName()
+    {
+        return Name;
     }
 }

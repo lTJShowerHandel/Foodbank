@@ -65,7 +65,7 @@ class Program
         Console.Write("Enter food name: ");
         string name = Console.ReadLine();
 
-        // Validate name is not empty
+        // Validate name is not empty ERROR HANDLING
         if (string.IsNullOrWhiteSpace(name))
         {
             Console.WriteLine("Error: Name cannot be empty!\n");
@@ -159,8 +159,9 @@ class Program
         {
             if (choice >= 1 && choice <= inventory.Count)
             {
-                string itemName = inventory[choice - 1].Name;
+                string itemName = inventory[choice - 1].GetName();
                 inventory.RemoveAt(choice - 1);
+                //the $ sign means that it is the equivalent of a f string in python and lets you put your variables into the string
                 Console.WriteLine($"\n✓ Successfully deleted {itemName} from inventory!\n");
             }
             else
