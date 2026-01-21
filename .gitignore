@@ -1,0 +1,17 @@
+# --- .NET/C# Junk ---
+bin/
+obj/
+[Xx]64/
+[Xx]86/
+*.user
+*.userosscache
+*.sln.docuser
+
+# --- Rider/JetBrains Junk ---
+.idea/
+*.sln.iml
+*.orig
+
+# --- OS Junk ---
+.DS_Store
+Thumbs.db
